@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BITES | Big Flavor. Freshly Made.</title>
+  <meta name="description" content="BITES — Fresh pastries, cakes, burgers, pizza, rolls, and quick bites. A contemporary neighborhood bakery and fast-food café. Order on WhatsApp!">
+  <meta property="og:title" content="BITES | Big Flavor. Freshly Made.">
+  <meta property="og:description" content="From cheesy pizzas to loaded burgers, creamy pastries and satisfying rolls — there's a bite for every craving.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#home" class="nav-logo" aria-label="BITES Home">BITES</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <!-- EDITABLE: WhatsApp number for mobile menu CTA -->
+    <a href="https://wa.me/918974336064?text=Hi!%20I%27d%20like%20to%20place%20an%20order." class="btn btn-whatsapp" style="margin-top:1rem;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Order on WhatsApp
+    </a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>♥</span> Made with Love
+        </div>
+        <h1>Big Flavor.<br>Freshly Made.</h1>
+        <!-- EDITABLE: Hero supporting text -->
+        <p>From cheesy pizzas to loaded burgers, creamy pastries and satisfying rolls — there's a bite for every craving.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <!-- EDITABLE: WhatsApp number -->
+          <a href="https://wa.me/918974336064?text=Hi!%20I%27d%20like%20to%20place%20an%20order." class="btn btn-outline-dark" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- EDITABLE: Replace with your hero food image -->
+        <img src="images/hero-food.png" alt="Gourmet burger with fries and cold coffee — freshly made at BITES" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MARQUEE BANNER
+       ============================================================ -->
+  <section class="marquee-section" aria-hidden="true">
+    <div class="marquee-row">
+      <div class="marquee-content">
+        <span class="marquee-item">Burgers <span class="dot"></span></span>
+        <span class="marquee-item accent">Pizza <span class="dot"></span></span>
+        <span class="marquee-item">Pastries <span class="dot"></span></span>
+        <span class="marquee-item golden">Cakes <span class="dot"></span></span>
+        <span class="marquee-item">Rolls <span class="dot"></span></span>
+        <span class="marquee-item accent">Fries <span class="dot"></span></span>
+        <span class="marquee-item">Sandwiches <span class="dot"></span></span>
+        <span class="marquee-item golden">Drinks <span class="dot"></span></span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span class="marquee-item">Burgers <span class="dot"></span></span>
+        <span class="marquee-item accent">Pizza <span class="dot"></span></span>
+        <span class="marquee-item">Pastries <span class="dot"></span></span>
+        <span class="marquee-item golden">Cakes <span class="dot"></span></span>
+        <span class="marquee-item">Rolls <span class="dot"></span></span>
+        <span class="marquee-item accent">Fries <span class="dot"></span></span>
+        <span class="marquee-item">Sandwiches <span class="dot"></span></span>
+        <span class="marquee-item golden">Drinks <span class="dot"></span></span>
+      </div>
+    </div>
+    <div class="marquee-row reverse">
+      <div class="marquee-content">
+        <span class="marquee-item golden">Fresh Every Day <span class="dot"></span></span>
+        <span class="marquee-item">Cheesy <span class="dot"></span></span>
+        <span class="marquee-item accent">Loaded <span class="dot"></span></span>
+        <span class="marquee-item">Crispy <span class="dot"></span></span>
+        <span class="marquee-item golden">Creamy <span class="dot"></span></span>
+        <span class="marquee-item">Spicy <span class="dot"></span></span>
+        <span class="marquee-item accent">Crunchy <span class="dot"></span></span>
+        <span class="marquee-item">Toasted <span class="dot"></span></span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span class="marquee-item golden">Fresh Every Day <span class="dot"></span></span>
+        <span class="marquee-item">Cheesy <span class="dot"></span></span>
+        <span class="marquee-item accent">Loaded <span class="dot"></span></span>
+        <span class="marquee-item">Crispy <span class="dot"></span></span>
+        <span class="marquee-item golden">Creamy <span class="dot"></span></span>
+        <span class="marquee-item">Spicy <span class="dot"></span></span>
+        <span class="marquee-item accent">Crunchy <span class="dot"></span></span>
+        <span class="marquee-item">Toasted <span class="dot"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MENU SECTION
+       ============================================================ -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <p class="section-label reveal">Our Menu</p>
+      <h2 class="section-heading reveal">Your Cravings, Covered.</h2>
+      <p class="section-subtitle reveal">Handcrafted with the freshest ingredients, every single day. Explore our favorites and find your perfect bite.</p>
+
+      <div class="menu-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pastries">Pastries</button>
+        <button class="filter-btn" data-filter="cakes">Cakes</button>
+        <button class="filter-btn" data-filter="burgers">Burgers</button>
+        <button class="filter-btn" data-filter="pizza">Pizza</button>
+        <button class="filter-btn" data-filter="rolls">Rolls</button>
+        <button class="filter-btn" data-filter="snacks">Snacks</button>
+        <button class="filter-btn" data-filter="drinks">Drinks</button>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Card 1: Chocolate Truffle Cake -->
+        <article class="menu-card reveal" data-category="cakes" id="menu-card-1">
+          <div class="menu-card-image">
+            <!-- EDITABLE: Replace with your product image -->
+            <img src="images/chocolate-truffle-cake.png" alt="Chocolate Truffle Cake — Rich chocolate ganache with berries" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Chocolate Truffle Cake</h3>
+            <!-- EDITABLE: Product description -->
+            <p class="menu-card-desc">Rich chocolate ganache layered with dark truffle cream and topped with fresh berries.</p>
+            <div class="menu-card-footer">
+              <!-- EDITABLE: Price -->
+              <span class="menu-card-price">₹349</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Chocolate%20Truffle%20Cake" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Fresh Cream Pastry -->
+        <article class="menu-card reveal reveal-delay-1" data-category="pastries" id="menu-card-2">
+          <div class="menu-card-image">
+            <img src="images/fresh-cream-pastry.png" alt="Fresh Cream Pastry — Flaky puff pastry with vanilla cream" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Fresh Cream Pastry</h3>
+            <p class="menu-card-desc">Layers of buttery puff pastry filled with whipped vanilla cream and a dusting of powdered sugar.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹89</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Fresh%20Cream%20Pastry" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Classic Veg Burger -->
+        <article class="menu-card reveal reveal-delay-2" data-category="burgers" id="menu-card-3">
+          <div class="menu-card-image">
+            <img src="images/classic-veg-burger.png" alt="Classic Veg Burger — Crispy veggie patty with cheese" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Classic Veg Burger</h3>
+            <p class="menu-card-desc">Crispy veggie patty with fresh lettuce, tomato, pickles, melted cheese, and our special house sauce.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹149</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Classic%20Veg%20Burger" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Loaded Chicken Burger -->
+        <article class="menu-card reveal reveal-delay-3" data-category="burgers" id="menu-card-4">
+          <div class="menu-card-image">
+            <img src="images/loaded-chicken-burger.png" alt="Loaded Chicken Burger — Crispy fried chicken with cheddar" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Loaded Chicken Burger</h3>
+            <p class="menu-card-desc">Crispy fried chicken with cheddar, jalapenos, coleslaw, and spicy mayo on a brioche bun.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹199</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Loaded%20Chicken%20Burger" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Margherita Pizza -->
+        <article class="menu-card reveal reveal-delay-4" data-category="pizza" id="menu-card-5">
+          <div class="menu-card-image">
+            <img src="images/margherita-pizza.png" alt="Margherita Pizza — Fresh mozzarella, basil, and tomato sauce" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Margherita Pizza</h3>
+            <p class="menu-card-desc">Thin crust topped with San Marzano tomato sauce, fresh mozzarella, and aromatic basil leaves.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹249</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Margherita%20Pizza" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Spicy Paneer Roll -->
+        <article class="menu-card reveal reveal-delay-5" data-category="rolls" id="menu-card-6">
+          <div class="menu-card-image">
+            <img src="images/spicy-paneer-roll.png" alt="Spicy Paneer Roll — Grilled paneer tikka in a warm paratha" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Spicy Paneer Roll</h3>
+            <p class="menu-card-desc">Smoky grilled paneer tikka with onions, peppers, and mint chutney wrapped in a soft, warm paratha.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹129</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Spicy%20Paneer%20Roll" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7: Cheesy Garlic Bread -->
+        <article class="menu-card reveal reveal-delay-6" data-category="snacks" id="menu-card-7">
+          <div class="menu-card-image">
+            <img src="images/cheesy-garlic-bread.png" alt="Cheesy Garlic Bread — Golden baked with melted mozzarella" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Cheesy Garlic Bread</h3>
+            <p class="menu-card-desc">Golden baked garlic bread loaded with melted mozzarella, garlic butter, and fresh herbs.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹119</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Cheesy%20Garlic%20Bread" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: Cold Coffee -->
+        <article class="menu-card reveal reveal-delay-7" data-category="drinks" id="menu-card-8">
+          <div class="menu-card-image">
+            <img src="images/cold-coffee.png" alt="Cold Coffee — Iced coffee with whipped cream and chocolate drizzle" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Cold Coffee</h3>
+            <p class="menu-card-desc">Refreshing iced coffee blended smooth, topped with whipped cream and chocolate drizzle.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹99</span>
+              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Cold%20Coffee" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY
+       ============================================================ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <p class="section-label reveal">Gallery</p>
+      <h2 class="section-heading reveal">A Taste in Every Frame</h2>
+      <p class="section-subtitle reveal">From our kitchen to your screen — peek inside the world of BITES.</p>
+
+      <div class="gallery-grid">
+        <!-- EDITABLE: Replace gallery images with your own -->
+        <div class="gallery-item reveal" data-name="Gourmet Burger & Fries">
+          <img src="images/hero-food.png" alt="Gourmet burger with fries at BITES" loading="lazy">
+          <div class="gallery-overlay"><span>Gourmet Burger & Fries</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1" data-name="Chocolate Truffle Cake">
+          <img src="images/chocolate-truffle-cake.png" alt="Chocolate truffle cake at BITES" loading="lazy">
+          <div class="gallery-overlay"><span>Chocolate Truffle Cake</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2" data-name="Golden Fries">
+          <img src="images/gallery-fries.png" alt="Golden crispy fries with dipping sauces" loading="lazy">
+          <div class="gallery-overlay"><span>Golden Fries</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-3" data-name="Club Sandwich">
+          <img src="images/gallery-sandwich.png" alt="Gourmet club sandwich at BITES" loading="lazy">
+          <div class="gallery-overlay"><span>Club Sandwich</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1" data-name="Assorted Pastries">
+          <img src="images/gallery-pastries.png" alt="Assorted bakery pastries at BITES" loading="lazy">
+          <div class="gallery-overlay"><span>Assorted Pastries</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2" data-name="Pizza Perfection">
+          <img src="images/gallery-pizza-slice.png" alt="Pizza with stretchy cheese at BITES" loading="lazy">
+          <div class="gallery-overlay"><span>Pizza Perfection</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-3" data-name="Loaded Chicken Burger">
+          <img src="images/loaded-chicken-burger.png" alt="Loaded chicken burger at BITES" loading="lazy">
+          <div class="gallery-overlay"><span>Loaded Chicken Burger</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-4" data-name="Margherita Pizza">
+          <img src="images/margherita-pizza.png" alt="Margherita pizza at BITES" loading="lazy">
+          <div class="gallery-overlay"><span>Margherita Pizza</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image preview" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+    <img src="" alt="Enlarged preview" id="lightboxImg">
+  </div>
+
+  <!-- ============================================================
+       CTA BANNER
+       ============================================================ -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-logo reveal">BITES</div>
+      <h2 class="reveal">Hungry Yet?</h2>
+      <!-- EDITABLE: CTA text -->
+      <p class="reveal">Your favorite treats and quick bites are just a message away.</p>
+      <!-- EDITABLE: WhatsApp number -->
+      <a href="https://wa.me/918974336064?text=Hi!%20I%27d%20like%20to%20place%20an%20order." class="btn btn-whatsapp reveal" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <p class="section-label reveal">Get in Touch</p>
+      <h2 class="section-heading reveal">Visit Us or Say Hello</h2>
+      <p class="section-subtitle reveal">Drop by our shop, give us a call, or send a quick message — we'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <!-- Info Column -->
+        <div class="contact-info reveal">
+          <!-- Address -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Address</h4>
+              <!-- EDITABLE: Shop address -->
+              <p>Shop No. 12, Main Market Road,<br>Near City Center, Your City — 000000</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <!-- EDITABLE: Phone number -->
+              <p><a href="tel:+918974336064">+91 8974336064</a></p>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Opening Hours</h4>
+              <!-- EDITABLE: Opening hours -->
+              <p>Mon – Sat: 9:00 AM – 10:00 PM<br>Sunday: 10:00 AM – 9:00 PM</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <!-- EDITABLE: Email address -->
+              <p><a href="mailto:hello@bites.in">hello@bites.in</a></p>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="social-icons">
+            <!-- EDITABLE: Social media links -->
+            <a href="https://instagram.com/" class="social-icon" aria-label="Follow us on Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://facebook.com/" class="social-icon" aria-label="Follow us on Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/918974336064" class="social-icon" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+
+          <!-- Map -->
+          <div class="contact-map">
+            <!-- EDITABLE: Replace the src URL with your actual Google Maps embed URL -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153167!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ4JzU4LjYiUyAxNDTCsDU3JzEzLjQiRQ!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="BITES Location on Google Maps"></iframe>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" name="name" placeholder="John Doe" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" placeholder="Tell us what you'd like..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="contactSubmit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">BITES</a>
+          <!-- EDITABLE: Tagline -->
+          <p>Big Flavor. Freshly Made. Your favorite neighborhood bakery & café serving happiness one bite at a time.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <!-- EDITABLE: Contact info -->
+          <p>+91 8974336064</p>
+          <p>hello@bites.in</p>
+          <p>Mon – Sat: 9AM – 10PM</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-social">
+            <!-- EDITABLE: Social links -->
+            <a href="https://instagram.com/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://facebook.com/" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/918974336064" class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <!-- EDITABLE: Copyright year -->
+        <p>&copy; 2025 BITES. All rights reserved.</p>
+        <p>Crafted with ♥ in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+       ============================================================ -->
+  <!-- EDITABLE: WhatsApp number -->
+  <a href="https://wa.me/918974336064?text=Hi!%20I%27d%20like%20to%20place%20an%20order." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" id="whatsappFloat">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="tooltip">Chat with us</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
