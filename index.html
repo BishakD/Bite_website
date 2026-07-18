@@ -28,7 +28,6 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -44,7 +43,6 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
     <a href="#home">Home</a>
     <a href="#menu">Menu</a>
-    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
     <!-- EDITABLE: WhatsApp number for mobile menu CTA -->
     <a href="https://wa.me/918974336064?text=Hi!%20I%27d%20like%20to%20place%20an%20order." class="btn btn-whatsapp" style="margin-top:1rem;">
@@ -135,201 +133,195 @@
        MENU SECTION
        ============================================================ -->
   <section class="menu-section" id="menu">
-    <div class="container">
-      <p class="section-label reveal">Our Menu</p>
-      <h2 class="section-heading reveal">Your Cravings, Covered.</h2>
-      <p class="section-subtitle reveal">Handcrafted with the freshest ingredients, every single day. Explore our favorites and find your perfect bite.</p>
+    <div class="menu-layout">
 
-      <div class="menu-filters reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="pastries">Pastries</button>
-        <button class="filter-btn" data-filter="cakes">Cakes</button>
-        <button class="filter-btn" data-filter="burgers">Burgers</button>
-        <button class="filter-btn" data-filter="pizza">Pizza</button>
-        <button class="filter-btn" data-filter="rolls">Rolls</button>
-        <button class="filter-btn" data-filter="snacks">Snacks</button>
-        <button class="filter-btn" data-filter="drinks">Drinks</button>
+      <!-- Left: Dark Polaroid Panel -->
+      <div class="menu-polaroid-panel">
+        <div class="menu-panel-header">
+          <h2 class="menu-panel-title">Menu</h2>
+          <p class="menu-panel-sub">BITES</p>
+          <div class="menu-panel-divider"></div>
+        </div>
+        <div class="menu-polaroids" id="menuPolaroids">
+          <div class="polaroid polaroid-1">
+            <img src="images/chocolate-truffle-cake.png" alt="Chocolate Truffle Cake" loading="lazy">
+          </div>
+          <div class="polaroid polaroid-2">
+            <img src="images/loaded-chicken-burger.png" alt="Loaded Chicken Burger" loading="lazy">
+          </div>
+          <div class="polaroid polaroid-3">
+            <img src="images/gallery-pastries.png" alt="Assorted Pastries" loading="lazy">
+          </div>
+          <div class="polaroid polaroid-4">
+            <img src="images/cold-coffee.png" alt="Cold Coffee" loading="lazy">
+          </div>
+        </div>
       </div>
 
-      <div class="menu-grid">
-        <!-- Card 1: Chocolate Truffle Cake -->
-        <article class="menu-card reveal" data-category="cakes" id="menu-card-1">
-          <div class="menu-card-image">
-            <!-- EDITABLE: Replace with your product image -->
-            <img src="images/chocolate-truffle-cake.png" alt="Chocolate Truffle Cake — Rich chocolate ganache with berries" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Chocolate Truffle Cake</h3>
-            <!-- EDITABLE: Product description -->
-            <p class="menu-card-desc">Rich chocolate ganache layered with dark truffle cream and topped with fresh berries.</p>
-            <div class="menu-card-footer">
-              <!-- EDITABLE: Price -->
-              <span class="menu-card-price">₹349</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Chocolate%20Truffle%20Cake" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
+      <!-- Right: Menu List Panel -->
+      <div class="menu-list-panel">
+        <!-- Info bar -->
+        <div class="menu-info-bar">
+          <!-- EDITABLE: Hours -->
+          <strong>Open at 9 AM – 10 PM</strong>
+          <span class="menu-info-divider">|</span>
+          <!-- EDITABLE: Address -->
+          <span>Shop No. 12, Main Market Road, Your City</span>
+          <span class="menu-info-divider">|</span>
+          <!-- EDITABLE: Phone -->
+          <span>+91 8974336064</span>
+        </div>
+        <div class="menu-info-rule"></div>
 
-        <!-- Card 2: Fresh Cream Pastry -->
-        <article class="menu-card reveal reveal-delay-1" data-category="pastries" id="menu-card-2">
-          <div class="menu-card-image">
-            <img src="images/fresh-cream-pastry.png" alt="Fresh Cream Pastry — Flaky puff pastry with vanilla cream" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Fresh Cream Pastry</h3>
-            <p class="menu-card-desc">Layers of buttery puff pastry filled with whipped vanilla cream and a dusting of powdered sugar.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">₹89</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Fresh%20Cream%20Pastry" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
+        <!-- Category: Pastries -->
+        <div class="menu-category reveal">
+          <h3 class="menu-cat-heading">Pastries</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Fresh Cream Pastry</span>
+                <span class="menu-item-price">₹89</span>
+              </div>
+              <p class="menu-item-desc">Layers of buttery puff pastry filled with whipped vanilla cream and a dusting of powdered sugar.</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Cheesy Garlic Bread</span>
+                <span class="menu-item-price">₹119</span>
+              </div>
+              <p class="menu-item-desc">Golden baked garlic bread loaded with melted mozzarella, garlic butter, and fresh herbs.</p>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Card 3: Classic Veg Burger -->
-        <article class="menu-card reveal reveal-delay-2" data-category="burgers" id="menu-card-3">
-          <div class="menu-card-image">
-            <img src="images/classic-veg-burger.png" alt="Classic Veg Burger — Crispy veggie patty with cheese" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Classic Veg Burger</h3>
-            <p class="menu-card-desc">Crispy veggie patty with fresh lettuce, tomato, pickles, melted cheese, and our special house sauce.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">₹149</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Classic%20Veg%20Burger" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
+        <!-- Category: Cakes -->
+        <div class="menu-category reveal">
+          <h3 class="menu-cat-heading">Cakes</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Chocolate Truffle Cake</span>
+                <span class="menu-item-price">₹349</span>
+              </div>
+              <p class="menu-item-desc">Rich chocolate ganache layered with dark truffle cream and topped with fresh berries.</p>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Card 4: Loaded Chicken Burger -->
-        <article class="menu-card reveal reveal-delay-3" data-category="burgers" id="menu-card-4">
-          <div class="menu-card-image">
-            <img src="images/loaded-chicken-burger.png" alt="Loaded Chicken Burger — Crispy fried chicken with cheddar" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Loaded Chicken Burger</h3>
-            <p class="menu-card-desc">Crispy fried chicken with cheddar, jalapenos, coleslaw, and spicy mayo on a brioche bun.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">₹199</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Loaded%20Chicken%20Burger" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
+        <!-- Category: Burgers -->
+        <div class="menu-category reveal">
+          <h3 class="menu-cat-heading">Burgers</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Classic Veg Burger</span>
+                <span class="menu-item-price">₹149</span>
+              </div>
+              <p class="menu-item-desc">Crispy veggie patty with fresh lettuce, tomato, pickles, melted cheese, and our special house sauce.</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Loaded Chicken Burger</span>
+                <span class="menu-item-price">₹199</span>
+              </div>
+              <p class="menu-item-desc">Crispy fried chicken with cheddar, jalapenos, coleslaw, and spicy mayo on a brioche bun.</p>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Card 5: Margherita Pizza -->
-        <article class="menu-card reveal reveal-delay-4" data-category="pizza" id="menu-card-5">
-          <div class="menu-card-image">
-            <img src="images/margherita-pizza.png" alt="Margherita Pizza — Fresh mozzarella, basil, and tomato sauce" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Margherita Pizza</h3>
-            <p class="menu-card-desc">Thin crust topped with San Marzano tomato sauce, fresh mozzarella, and aromatic basil leaves.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">₹249</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Margherita%20Pizza" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
+        <!-- Category: Pizza -->
+        <div class="menu-category reveal">
+          <h3 class="menu-cat-heading">Pizza</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Margherita Pizza</span>
+                <span class="menu-item-price">₹249</span>
+              </div>
+              <p class="menu-item-desc">Thin crust topped with San Marzano tomato sauce, fresh mozzarella, and aromatic basil leaves.</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Pizza Perfection Slice</span>
+                <span class="menu-item-price">₹99</span>
+              </div>
+              <p class="menu-item-desc">Stretchy-cheese loaded single slice with your choice of toppings, baked fresh.</p>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Card 6: Spicy Paneer Roll -->
-        <article class="menu-card reveal reveal-delay-5" data-category="rolls" id="menu-card-6">
-          <div class="menu-card-image">
-            <img src="images/spicy-paneer-roll.png" alt="Spicy Paneer Roll — Grilled paneer tikka in a warm paratha" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Spicy Paneer Roll</h3>
-            <p class="menu-card-desc">Smoky grilled paneer tikka with onions, peppers, and mint chutney wrapped in a soft, warm paratha.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">₹129</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Spicy%20Paneer%20Roll" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
+        <!-- Category: Rolls & Snacks -->
+        <div class="menu-category reveal">
+          <h3 class="menu-cat-heading">Rolls &amp; Snacks</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Spicy Paneer Roll</span>
+                <span class="menu-item-price">₹129</span>
+              </div>
+              <p class="menu-item-desc">Smoky grilled paneer tikka with onions, peppers, and mint chutney in a soft warm paratha.</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Club Sandwich</span>
+                <span class="menu-item-price">₹139</span>
+              </div>
+              <p class="menu-item-desc">Triple-layered toasted bread with fresh veggies, cheese, and tangy mayo.</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Golden Fries</span>
+                <span class="menu-item-price">₹79</span>
+              </div>
+              <p class="menu-item-desc">Crispy golden fries with a side of ketchup and our house seasoning blend.</p>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Card 7: Cheesy Garlic Bread -->
-        <article class="menu-card reveal reveal-delay-6" data-category="snacks" id="menu-card-7">
-          <div class="menu-card-image">
-            <img src="images/cheesy-garlic-bread.png" alt="Cheesy Garlic Bread — Golden baked with melted mozzarella" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Cheesy Garlic Bread</h3>
-            <p class="menu-card-desc">Golden baked garlic bread loaded with melted mozzarella, garlic butter, and fresh herbs.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">₹119</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Cheesy%20Garlic%20Bread" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
+        <!-- Category: Drinks -->
+        <div class="menu-category reveal">
+          <h3 class="menu-cat-heading">Drinks</h3>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Cold Coffee</span>
+                <span class="menu-item-price">₹99</span>
+              </div>
+              <p class="menu-item-desc">Refreshing iced coffee blended smooth, topped with whipped cream and chocolate drizzle.</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Vanilla Cream Shake</span>
+                <span class="menu-item-price">₹129</span>
+              </div>
+              <p class="menu-item-desc">Thick, creamy vanilla milkshake topped with whipped cream and a cherry.</p>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-name">Masala Chai Latte</span>
+                <span class="menu-item-price">₹69</span>
+              </div>
+              <p class="menu-item-desc">Aromatic Indian spiced tea brewed rich, finished with a frothy milk swirl.</p>
+            </li>
+          </ul>
+        </div><!-- /Drinks category -->
 
-        <!-- Card 8: Cold Coffee -->
-        <article class="menu-card reveal reveal-delay-7" data-category="drinks" id="menu-card-8">
-          <div class="menu-card-image">
-            <img src="images/cold-coffee.png" alt="Cold Coffee — Iced coffee with whipped cream and chocolate drizzle" loading="lazy">
-          </div>
-          <div class="menu-card-body">
-            <h3 class="menu-card-name">Cold Coffee</h3>
-            <p class="menu-card-desc">Refreshing iced coffee blended smooth, topped with whipped cream and chocolate drizzle.</p>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">₹99</span>
-              <a href="https://wa.me/918974336064?text=I'd%20like%20to%20order%20Cold%20Coffee" class="menu-card-btn" target="_blank" rel="noopener">Order</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
+      </div><!-- /menu-list-panel -->
+    </div><!-- /menu-layout -->
   </section>
-
-  <!-- ============================================================
-       GALLERY
-       ============================================================ -->
-  <section class="gallery-section" id="gallery">
-    <div class="container">
-      <p class="section-label reveal">Gallery</p>
-      <h2 class="section-heading reveal">A Taste in Every Frame</h2>
-      <p class="section-subtitle reveal">From our kitchen to your screen — peek inside the world of BITES.</p>
-
-      <div class="gallery-grid">
-        <!-- EDITABLE: Replace gallery images with your own -->
-        <div class="gallery-item reveal" data-name="Gourmet Burger & Fries">
-          <img src="images/hero-food.png" alt="Gourmet burger with fries at BITES" loading="lazy">
-          <div class="gallery-overlay"><span>Gourmet Burger & Fries</span></div>
-        </div>
-        <div class="gallery-item reveal reveal-delay-1" data-name="Chocolate Truffle Cake">
-          <img src="images/chocolate-truffle-cake.png" alt="Chocolate truffle cake at BITES" loading="lazy">
-          <div class="gallery-overlay"><span>Chocolate Truffle Cake</span></div>
-        </div>
-        <div class="gallery-item reveal reveal-delay-2" data-name="Golden Fries">
-          <img src="images/gallery-fries.png" alt="Golden crispy fries with dipping sauces" loading="lazy">
-          <div class="gallery-overlay"><span>Golden Fries</span></div>
-        </div>
-        <div class="gallery-item reveal reveal-delay-3" data-name="Club Sandwich">
-          <img src="images/gallery-sandwich.png" alt="Gourmet club sandwich at BITES" loading="lazy">
-          <div class="gallery-overlay"><span>Club Sandwich</span></div>
-        </div>
-        <div class="gallery-item reveal reveal-delay-1" data-name="Assorted Pastries">
-          <img src="images/gallery-pastries.png" alt="Assorted bakery pastries at BITES" loading="lazy">
-          <div class="gallery-overlay"><span>Assorted Pastries</span></div>
-        </div>
-        <div class="gallery-item reveal reveal-delay-2" data-name="Pizza Perfection">
-          <img src="images/gallery-pizza-slice.png" alt="Pizza with stretchy cheese at BITES" loading="lazy">
-          <div class="gallery-overlay"><span>Pizza Perfection</span></div>
-        </div>
-        <div class="gallery-item reveal reveal-delay-3" data-name="Loaded Chicken Burger">
-          <img src="images/loaded-chicken-burger.png" alt="Loaded chicken burger at BITES" loading="lazy">
-          <div class="gallery-overlay"><span>Loaded Chicken Burger</span></div>
-        </div>
-        <div class="gallery-item reveal reveal-delay-4" data-name="Margherita Pizza">
-          <img src="images/margherita-pizza.png" alt="Margherita pizza at BITES" loading="lazy">
-          <div class="gallery-overlay"><span>Margherita Pizza</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image preview" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
-    <img src="" alt="Enlarged preview" id="lightboxImg">
-  </div>
 
   <!-- ============================================================
        CTA BANNER
@@ -467,7 +459,6 @@
           <h4>Navigate</h4>
           <a href="#home">Home</a>
           <a href="#menu">Menu</a>
-          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
         </div>
 

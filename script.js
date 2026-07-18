@@ -5,18 +5,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // ---- DOM References ----
-  const navbar = document.getElementById('navbar');
-  const hamburger = document.getElementById('navHamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const menuCards = document.querySelectorAll('.menu-card');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxClose = document.getElementById('lightboxClose');
+  const navbar      = document.getElementById('navbar');
+  const hamburger   = document.getElementById('navHamburger');
+  const mobileMenu  = document.getElementById('mobileMenu');
+  const navLinks    = document.querySelectorAll('.nav-links a, .mobile-menu a');
   const contactForm = document.getElementById('contactForm');
-  const reveals = document.querySelectorAll('.reveal');
+  const reveals     = document.querySelectorAll('.reveal');
 
   // ============================================================
   // 1. STICKY NAV — Scrolled state
@@ -25,18 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleNavScroll() {
     const scrollY = window.scrollY;
-
     if (scrollY > 60) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
-
     lastScrollY = scrollY;
   }
 
   window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll(); // Initial check
+  handleNavScroll();
 
   // ============================================================
   // 2. MOBILE MENU — Toggle
@@ -72,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (mobileMenu.classList.contains('active')) closeMobileMenu();
-      if (lightbox.classList.contains('active')) closeLightbox();
     }
   });
 
@@ -87,10 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = document.querySelector(href);
         if (target) {
           const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
         }
       }
     });
@@ -98,16 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Active link highlighting on scroll
   function updateActiveLink() {
-    const sections = ['home', 'menu', 'gallery', 'contact'];
+    const sections = ['home', 'menu', 'contact'];
     const scrollPos = window.scrollY + 150;
 
     sections.forEach(id => {
       const section = document.getElementById(id);
       if (!section) return;
-
-      const top = section.offsetTop;
+      const top    = section.offsetTop;
       const height = section.offsetHeight;
-
       document.querySelectorAll('.nav-links a').forEach(a => {
         if (a.getAttribute('href') === '#' + id) {
           if (scrollPos >= top && scrollPos < top + height) {
@@ -123,87 +109,44 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateActiveLink, { passive: true });
 
   // ============================================================
-  // 4. MENU FILTER — Category tabs
+  // 4. POLAROID PARALLAX — Subtle scroll animation
+  //    Each polaroid moves at a different speed as you scroll
+  //    through the menu section, creating a layered overlap feel.
   // ============================================================
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Update active state
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  const polaroidPanel = document.querySelector('.menu-polaroid-panel');
+  const polaroids = document.querySelectorAll('.polaroid');
 
-      const filter = btn.dataset.filter;
+  // Parallax speeds (positive = move down, negative = move up)
+  const speeds = [0.06, -0.09, 0.12, -0.06];
+  // Base rotations that match CSS
+  const baseRotations = [-6, 5, -3, 7];
 
-      menuCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
-          // Re-trigger reveal animation
-          requestAnimationFrame(() => {
-            card.classList.remove('visible');
-            requestAnimationFrame(() => {
-              card.classList.add('visible');
-            });
-          });
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  function animatePolaroids() {
+    if (!polaroidPanel || polaroids.length === 0) return;
+
+    const panelRect  = polaroidPanel.getBoundingClientRect();
+    const viewH      = window.innerHeight;
+
+    // How far the panel has scrolled through the viewport (0–1)
+    const progress = 1 - (panelRect.top + panelRect.height) / (viewH + panelRect.height);
+    const clamped  = Math.max(0, Math.min(1, progress));
+
+    polaroids.forEach((p, i) => {
+      const shift    = (clamped - 0.5) * 220 * speeds[i]; // max ~±20px
+      const rotExtra = (clamped - 0.5) * 4  * (i % 2 === 0 ? 1 : -1);
+      p.style.transform = `rotate(${baseRotations[i] + rotExtra}deg) translateY(${shift}px)`;
     });
-  });
-
-  // ============================================================
-  // 5. GALLERY LIGHTBOX
-  // ============================================================
-  function openLightbox(src, alt) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || 'Enlarged preview';
-    lightbox.classList.add('active');
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
   }
 
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    lightbox.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    // Clear src after transition
-    setTimeout(() => {
-      lightboxImg.src = '';
-    }, 350);
+  // Only run on desktop (panel is sticky)
+  const mq = window.matchMedia('(min-width: 769px)');
+  if (mq.matches) {
+    window.addEventListener('scroll', animatePolaroids, { passive: true });
+    animatePolaroids();
   }
 
-  galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const img = item.querySelector('img');
-      if (img) {
-        openLightbox(img.src, img.alt);
-      }
-    });
-
-    // Keyboard accessibility
-    item.setAttribute('tabindex', '0');
-    item.setAttribute('role', 'button');
-    item.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        const img = item.querySelector('img');
-        if (img) openLightbox(img.src, img.alt);
-      }
-    });
-  });
-
-  lightboxClose.addEventListener('click', (e) => {
-    e.stopPropagation();
-    closeLightbox();
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
-
   // ============================================================
-  // 6. SCROLL REVEAL — IntersectionObserver
+  // 5. SCROLL REVEAL — IntersectionObserver
   // ============================================================
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -222,24 +165,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     reveals.forEach(el => revealObserver.observe(el));
   } else {
-    // If reduced motion, show everything immediately
     reveals.forEach(el => el.classList.add('visible'));
   }
 
   // ============================================================
-  // 7. CONTACT FORM — Basic validation
+  // 6. CONTACT FORM — Basic validation
   // ============================================================
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('contactName');
-      const phone = document.getElementById('contactPhone');
-      const message = document.getElementById('contactMessage');
+      const name      = document.getElementById('contactName');
+      const phone     = document.getElementById('contactPhone');
+      const message   = document.getElementById('contactMessage');
       const submitBtn = document.getElementById('contactSubmit');
       let valid = true;
 
-      // Simple validation
       [name, phone, message].forEach(field => {
         if (!field.value.trim()) {
           field.style.borderColor = '#c0392b';
@@ -251,16 +192,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      // Success feedback
       const originalText = submitBtn.textContent;
       submitBtn.textContent = 'Message Sent! ✓';
-      submitBtn.style.background = '#25D366';
-      submitBtn.style.borderColor = '#25D366';
+      submitBtn.style.background   = '#25D366';
+      submitBtn.style.borderColor  = '#25D366';
       submitBtn.disabled = true;
 
       setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.style.background = '';
+        submitBtn.textContent    = originalText;
+        submitBtn.style.background  = '';
         submitBtn.style.borderColor = '';
         submitBtn.disabled = false;
         contactForm.reset();
