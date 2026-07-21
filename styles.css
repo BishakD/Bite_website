@@ -274,17 +274,27 @@ p {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--golden);
-  letter-spacing: 0.05em;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  transition: opacity var(--transition-fast);
 }
 
-.navbar.scrolled .nav-logo {
-  color: var(--golden);
+.nav-logo:hover {
+  opacity: 0.85;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transition: height var(--transition-mid);
+}
+
+.navbar.scrolled .logo-img {
+  height: 60px;
 }
 
 .nav-links {
@@ -1025,10 +1035,21 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-brand .nav-logo {
-  font-size: 2.2rem;
-  margin-bottom: 0.75rem;
+.footer-logo-link {
   display: inline-block;
+  margin-bottom: 1.25rem;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-logo-link:hover {
+  opacity: 0.85;
+}
+
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .footer-brand p {
@@ -1277,16 +1298,7 @@ p {
     display: flex;
   }
 
-  /* Center BITES logo horizontally on mobile */
-  .navbar .container {
-    position: relative;
-  }
-
-  .nav-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  /* Logo stays left-aligned on mobile */
 
   /* Menu: stack to single column on tablet */
   .menu-layout {
@@ -1321,6 +1333,14 @@ p {
 
 /* Mobile portrait */
 @media (max-width: 480px) {
+  .logo-img {
+    height: 50px;
+  }
+
+  .navbar.scrolled .logo-img {
+    height: 40px;
+  }
+
   .hero {
     min-height: auto;
     padding: 7rem 0 3rem;
